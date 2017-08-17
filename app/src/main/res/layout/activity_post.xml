@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.android.blogapp.PostActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        android:layout_marginTop="-9dp"
+        app:layout_constraintHorizontal_bias="0.0" />
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/post_user_image"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:layout_alignBottom="@+id/particlesView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@mipmap/ic_photo"
+        app:civ_border_color="#ffffff"
+        app:civ_border_width="2dp"
+        app:civ_fill_color="#ffff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:layout_marginStart="8dp" />
+
+
+    <EditText
+        android:id="@+id/postDesc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="35dp"
+        android:background="#00ffffff"
+        android:hint="share an article, idea !"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/post_user_image"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <ImageView
+        android:id="@+id/post_image_placeholder"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postDesc" />
+
+
+    <!-- <ImageButton
+         android:id="@+id/selectImage"
+         android:layout_width="0dp"
+         android:layout_height="183dp"
+         android:layout_marginTop="8dp"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintRight_toRightOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+
+         <EditText
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:hint="Post Title"
+             android:singleLine="true"
+             android:layout_marginRight="8dp"
+             app:layout_constraintRight_toRightOf="parent"
+             android:layout_marginLeft="8dp"
+             app:layout_constraintLeft_toLeftOf="parent"
+             android:layout_marginTop="24dp"
+             app:layout_constraintTop_toBottomOf="@+id/selectImage"
+             android:id="@+id/postTitle"
+             app:layout_constraintHorizontal_bias="0.0"
+             android:layout_marginStart="8dp"
+             android:layout_marginEnd="8dp" />
+
+
+     <EditText
+         android:id="@+id/postDes"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="8dp"
+         android:layout_marginRight="8dp"
+         android:layout_marginTop="8dp"
+         android:hint="Poset description"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintRight_toRightOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/postTitle"
+         android:layout_marginStart="8dp"
+         android:layout_marginEnd="8dp" />
+
+
+     <Button
+         android:id="@+id/submit"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:text="Button"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintRight_toRightOf="parent"
+         app:layout_constraintHorizontal_bias="0.0"
+         android:layout_marginBottom="142dp" />-->
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <Button
+            android:id="@+id/post_selectimage"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_photo"
+            android:paddingTop="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:text="POST"
+            android:id="@+id/post_submit"/>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

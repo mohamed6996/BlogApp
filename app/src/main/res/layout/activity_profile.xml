@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
+
+
+            <com.doctoror.particlesdrawable.ParticlesView
+                android:id="@+id/particlesView"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="#00FFFFFF"
+                app:dotColor="#4dafff"
+                app:frameDelayMillis="10"
+                app:lineColor="#bbbbbb"
+                app:lineDistance="86dp"
+                app:lineThickness="1dp"
+                app:maxDotRadius="4dp"
+                app:minDotRadius="1dp"
+                app:numDots="20"
+                app:stepMultiplier="1" />
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_alignBottom="@+id/particlesView"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/ic_photo"
+                app:civ_border_color="#ffffff"
+                app:civ_border_width="2dp"
+                app:civ_fill_color="#ffff" />
+
+            <EditText
+                android:id="@+id/profile_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="#00ffffff"
+                android:hint="user name"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/profile_user_profession"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/profile_user_name"
+                android:layout_below="@+id/profile_user_name"
+                android:layout_marginTop="10dp"
+                android:background="#00ffffff"
+                android:hint="profession"
+                android:singleLine="false" />
+
+        </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/profilerec"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+</android.support.design.widget.CoordinatorLayout>
